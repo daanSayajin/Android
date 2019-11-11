@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_subscribe_categories"
+        android:icon="@drawable/ic_apps"
+        android:title="Subscribe Categories" />
+
+    <item
+        android:id="@+id/submenu_news"
+        android:title="Related News">
+
+        <menu>
+            <item
+                android:id="@+id/submenu_news_editor_picked_news"
+                android:icon="@drawable/ic_volume_up"
+                android:title="Editor Picked News" />
+
+            <item
+                android:id="@+id/submenu_news_trending_news"
+                android:icon="@drawable/ic_trending"
+                android:title="Trending News" />
+
+            <item
+                android:id="@+id/submenu_news_recent_news"
+                android:icon="@drawable/ic_time"
+                android:title="Recent News" />
+
+            <item
+                android:id="@+id/submenu_news_search_news"
+                android:icon="@drawable/ic_search"
+                android:title="Search News" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/submenu_user"
+        android:title="User Info">
+
+        <menu>
+            <item
+                android:id="@+id/submenu_user_account"
+                android:icon="@drawable/ic_account"
+                android:title="My Profile" />
+        </menu>
+    </item>
+</menu>
