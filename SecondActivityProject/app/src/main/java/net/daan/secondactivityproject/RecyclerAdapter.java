@@ -1,5 +1,6 @@
 package net.daan.secondactivityproject;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,11 +27,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Article article = list.get(position);
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+        final Article article = list.get(position);
 
         holder.setLblTitle(article.getTitle());
         holder.setLblDescription(article.getAuthor());
+        new DownloadImageTask(holder.getImgArticle()).execute(article.getEnclosure().getUrl());
+
+        holder.btnRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, article.getSource());
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

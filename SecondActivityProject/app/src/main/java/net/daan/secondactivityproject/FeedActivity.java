@@ -9,13 +9,14 @@ import com.pkmmte.pkrss.Article;
 import com.pkmmte.pkrss.Callback;
 import com.pkmmte.pkrss.PkRSS;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FeedActivity extends AppCompatActivity implements Callback {
 
     private RecyclerView recyclerView;
     private RecyclerAdapter adapter;
-    private List<Article> list;
+    private List<Article> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,9 @@ public class FeedActivity extends AppCompatActivity implements Callback {
 
     @Override
     public void onLoaded(List<Article> newArticles) {
-
+        list.clear();
+        list.addAll(newArticles);
+        adapter.notifyDataSetChanged();
     }
 
     @Override

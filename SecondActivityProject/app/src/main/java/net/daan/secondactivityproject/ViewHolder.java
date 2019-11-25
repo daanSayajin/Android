@@ -11,7 +11,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     private ImageView imgArticle;
     private TextView lblTitle;
     private TextView lblDescription;
-    private Button btnRead;
+    public Button btnRead;
 
     public ViewHolder(View itemView) {
         super(itemView);
@@ -22,8 +22,8 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         btnRead = itemView.findViewById(R.id.btn_read);
     }
 
-    public void setImgArticle(ImageView imgArticle) {
-        this.imgArticle = imgArticle;
+    public ImageView getImgArticle() {
+        return this.imgArticle;
     }
 
     public void setLblTitle(String lblTitle) {
@@ -32,9 +32,5 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public void setLblDescription(String lblDescription) {
         this.lblDescription.setText(lblDescription);
-    }
-
-    public void setBtnRead(Button btnRead) {
-        this.btnRead = btnRead;
     }
 }

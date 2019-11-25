@@ -44,6 +44,7 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_business"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_marginBottom="7dp"
