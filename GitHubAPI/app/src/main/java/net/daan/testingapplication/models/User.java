@@ -1,4 +1,4 @@
-package net.daan.testingapplication;
+package net.daan.testingapplication.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

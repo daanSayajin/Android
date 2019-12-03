@@ -3,4 +3,14 @@
     <color name="colorPrimary">#24292E</color>
     <color name="colorPrimaryDark">#24292E</color>
     <color name="colorAccent">#1d35cf</color>
+    <color name="defaultLanguage">#ccc</color>
+    <color name="js">#f1e05a</color>
+    <color name="php">#4f5d95</color>
+    <color name="cpp">#f34b7d</color>
+    <color name="css">#563d7c</color>
+    <color name="shell">#89e051</color>
+    <color name="html">#e34c26</color>
+    <color name="csharp">#178600</color>
+    <color name="java">#b07219</color>
+    <color name="python">#3572a5</color>
 </resources>
